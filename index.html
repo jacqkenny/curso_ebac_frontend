@@ -13,39 +13,40 @@
 <body>
     <div class="container">
         <header>
-            <img src="./Imagem/logo.png" alt="capelo e diploma">
+            <img src="./Imagem/capelo e diploma.png" alt="capelo e diploma">
             <h1>NOTAS 5° ANO B</h1>
         </header>
-            <form>
-                <input type="text" id="nome-beneficiario" required placeholder="Nome completo do aluno" />
-                <input type="number" id="NOTAS" required placeholder="Nota" min="0" max="10" />
-                <button type="submit">adicionar +</button>
-            </form>
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Aluno A
-                        </th>
-                        <th>
-                            Nota da prova
-                        </th>
-                        <th>Aprovado?</th>
-                    </tr>
-                </thead>
-                <body>
-                    <td>Aluno A</td>
+        <form id="form-atividade">
+            <input type="text" id="nome-aluno" required placeholder="Nome do aluno" />
+            <input type="number" id="nota-aluno" required placeholder="Nota" min="0" max="10" />
+            <button type="submit">adicionar +</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>
+                        Nome do Aluno
+                    </th>
+                    <th>Nota do Aluno</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nome do Aluno A</td>
                     <td>7</td>
                     <td><img src="./Imagem/aprovado.png" alt="emoji festejando"></td>
-                </body>
-                <tfoot>
-                    <tr>
-                        <td>Média Final</td>
-                        <td>7</td>
-                        <td>aprovado</td>
-                    </tr>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Média Final</td>
+                    <td>7</td>
+                    <td><span class= "resultado aprovado">aprovado</span</td>
+                </tr>
                 </tfoot>
             </table>
     </div>
+    <script src="./main.js"></script>
 </body>
 </html>
