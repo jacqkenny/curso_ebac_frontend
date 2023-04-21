@@ -3,9 +3,9 @@ const imgAprovado = '<img src="./Imagem/aprovado.png" alt="Emoji celebrando" />'
 const imgReprovado = '<img src="./Imagem/reprovado.png" alt="Emoji decepcionado" />';
 const atividades = [];
 const notas = [];
-const spanAprovado = <span class = "resultado aprovado">Aprovado</span>;
-const spanReprovado = <span class = "resultado Reprovado">Reprovado</span>;
-constMinima = parseFloat(prompt("Digite a notaMINIMA:"));
+const spanAprovado = '<span class = "resultado aprovado">Aprovado</span>';
+const spanReprovado = '<span class = "resultado Reprovado">Reprovado</span>';
+const notaMinima = parseFloat(prompt("Digite a notamínima:"));
 
 let linhas = '';
 
@@ -22,15 +22,15 @@ function adicionaLinha() {
     const inputNotaAluno = document.getElementById('nota-aluno');
 
 if (alunos.includes(inputNomeAluno.value)) {
-    alert('O aluno: ${inputNomeAluno.value} ja foi adicionado');
+    alert(`O aluno: ${inputNomeAluno.value} já foi inserido`);
 }else {
     atividades.push(inputNomeAluno.value);
-    notas.push.parseFloat(inputNotaAluno.value);
+    notas.push(parseFloat(inputNotaAluno.value));
 
     let linha = '<tr>';
     linha += `<td>${inputNomeAluno.value}</td>`;
     linha += `<td>${inputNotaAluno.value}</td>`;
-    linha += `<td>${inputNotaAluno.value>= constMinima ? spanAprovado : spanReprovado}</td>`;
+    linha += `<td>${inputNotaAluno.value>= NotaMinima ? imgAprovado : imgReprovado}</td>`;
     linha += '</tr>';
 
     linhas += linha;
@@ -49,7 +49,7 @@ function atualizaMediaFinal() {
     const mediaFinal =calculaMediaFinal();
 
     document.getElementById('media-final-valor').innerHTML = mediaFinal;
-    document.getElementById('media-final-resultado').innerHTML = mediaFinal>= 7 ? 'Aprovado': 'Reprovado';
+    document.getElementById('media-final-resultado').innerHTML = mediaFinal>= const NotaMinima ? 'Aprovado': 'Reprovado';
 
 }
 
