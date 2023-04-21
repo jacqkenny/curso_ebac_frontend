@@ -1,15 +1,15 @@
 const form = document.getElementById('form-aluno');
-const imgAprovado = '<img src="./imagem/aprovado.png" alt="Emoji celebrando" />';
-const imgReprovado = '<img src="./imagem/reprovado.png" alt="Emoji decepcionado" />';
+const imgAprovado = '<img src="./Imagem/aprovado.png" alt="Emoji celebrando" />';
+const imgReprovado = '<img src="./Imagem/reprovado.png" alt="Emoji decepcionado" />';
 const atividades = [];
 const notas = [];
 const spanAprovado = <span class = "resultado aprovado">Aprovado</span>;
 const spanReprovado = <span class = "resultado Reprovado">Reprovado</span>;
-constMinima = parseFloat(prompt("Digite a notA MINIMA:"));
+constMinima = parseFloat(prompt("Digite a notaMINIMA:"));
 
 let linhas = '';
 
-form.addEventListener('Submit', function (e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault(); 
 
     adicionaLinha();
